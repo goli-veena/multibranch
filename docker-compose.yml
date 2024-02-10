@@ -1,0 +1,20 @@
+---
+version: "3"
+services:
+  service-1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVICE_NAME: service1
+    ports:
+      - "8001:80"
+  service-2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVICE_NAME: service2
+    ports:
+      - "8000:80"
+
